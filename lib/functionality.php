@@ -63,7 +63,7 @@ function roleDefiner($role){
     }
     //comprovación de si el usuario ha aceptado la politica de cookies
     function cookiePolicyAccept(){
-        if(isset($_SESSION["noCookienoAcces"]) && $_SESSION["noCookienoAcces"] != true){
+        if(isset($_SESSION["noCookienoAcces"]) !=true || $_SESSION["noCookienoAcces"] != true ){
             header("location:?url=home");
         }
     }

@@ -43,14 +43,16 @@ switch($userSelect){
                 $redundance = issetObject($gdb,"tasks","description",$newTaskName);
                 if($redundance <= 0){ //si da + de uno significa que ya existe esa tarea (no la podemos volver a crear)
                     addTask($gdb,$selectedListId,$newTaskName);
-                    setcookie("result", "true", time()+4 );    
+                    setcookie("result", "true", time()+4 ); 
+                    break;   
                 }else{
-                     setcookie("result", "false", time()+4 ); 
+                     setcookie("result", "false", time()+4 );
+                     break; 
                 }
                 
             }
             
-                
+               setcookie("result", "false", time()+4 );  
         }
        
         break;
